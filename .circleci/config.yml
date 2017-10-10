@@ -5,4 +5,4 @@ jobs:
        - image: circleci/php:7.0.18-apache
      steps:
        - checkout
-       - run: echo "hello world"
+       - run: echo "hello world"sw

@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: circleci/php:latest-browsers
+       - image: circleci/php:7-cli
      steps:
        - checkout
        - run: echo "hello world"

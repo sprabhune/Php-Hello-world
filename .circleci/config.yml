@@ -10,4 +10,4 @@ jobs:
         environment:
           POSTGRES_USER: root
           POSTGRES_DB: circle_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: "123456"

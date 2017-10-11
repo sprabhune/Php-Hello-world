@@ -2,7 +2,6 @@ version: 2
 jobs:
    build:
      docker:
-       *- image: circleci/postgres:7-apache-browsers*
        - image: circleci/postgres:9.5
         environment:
         - POSTGRES_USER=ubuntu

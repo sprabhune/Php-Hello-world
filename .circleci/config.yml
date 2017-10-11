@@ -7,7 +7,6 @@ database:
   override:
     - createdb test
     - echo "CREATE ROLE api WITH UNENCRYPTED PASSWORD 'password';" | psql -U postgres
-    - echo "ALTER ROLE api WITH LOGIN;" | psql -U postgres
-     steps:
+    steps:
        - checkout
        - run: echo "Hello world Test"

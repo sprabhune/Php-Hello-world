@@ -11,17 +11,3 @@ jobs:
           POSTGRES_USER: ubuntu
           POSTGRES_DB: circle_test
           POSTGRES_PASSWORD: ""
-    steps:
-      - checkout
-      - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
-      - run:
-          name: Install Python deps in a venv
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements/dev.txt
-      - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
-          paths:
-            - "venv"

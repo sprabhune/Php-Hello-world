@@ -6,10 +6,10 @@ jobs:
       # environment:
       #  - POSTGRES_USER=ubuntu
       #  - POSTGRES_DB=change1
-         steps:
-      - checkout
-      - name: Install System Dependencies
-        command: apt-get update -qq && apt-get install -y build-essential postgresql libpq-dev nodejs rake
+      #   steps:
+      #- checkout
+      #- name: Install System Dependencies
+      #  command: apt-get update -qq && apt-get install -y build-essential postgresql libpq-dev nodejs rake
       - name: Set up DB
         command: |
           bundle exec rake db:create db:schema:load --trace

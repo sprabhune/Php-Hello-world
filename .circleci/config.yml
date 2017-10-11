@@ -2,6 +2,7 @@ version: 2
 jobs:
    build:
      docker:
+       - image: circleci/php:5.6.30-cli
        - image: circleci/postgres:9.2-alpine
      steps:
        - checkout

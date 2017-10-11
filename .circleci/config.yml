@@ -10,12 +10,12 @@ jobs:
       #- checkout
       #- name: Install System Dependencies
       #  command: apt-get update -qq && apt-get install -y build-essential postgresql libpq-dev nodejs rake
-      - name: Set up DB
-        command: |
-          bundle exec rake db:create db:schema:load --trace
-          bundle exec rake db:migrate
-        environment:
-          DATABASE_URL: "postgres://ubuntu@localhost:5432/db_name"
-     steps:
+      #- name: Set up DB
+      #  command: 
+      #    bundle exec rake db:create db:schema:load --trace
+      #    bundle exec rake db:migrate
+      #  environment:
+      #    DATABASE_URL: "postgres://ubuntu@localhost:5432/db_name"
+     #steps:
        - checkout
        - run: echo "Hello world Test"

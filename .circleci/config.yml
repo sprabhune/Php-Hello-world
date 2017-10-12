@@ -3,13 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.2-stretch-browsers
-      steps
-        environment:
+      environment:
           - FLASK_CONFIG: testing
           - TEST_DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
       - image: circleci/postgres:9.6.5-alpine-ram
-        steps
-        environment:
+      environment:
           - POSTGRES_USER: root
           - POSTGRES_DB: circle_test
           - POSTGRES_PASSWORD: ""
